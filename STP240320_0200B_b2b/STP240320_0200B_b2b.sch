@@ -114,13 +114,13 @@ Wire Wire Line
 $Comp
 L Connector_Generic:Conn_02x08_Odd_Even J1
 U 1 1 5FC149EE
-P 6800 2300
-F 0 "J1" H 6850 2850 50  0000 C CNN
-F 1 "Conn_02x08_Odd_Even" H 6850 2750 50  0000 C CNN
-F 2 "Connector_Molex:Molex_SlimStack_55560-0161_2x08_P0.50mm_Vertical" H 6800 1800 50  0000 C CNN
-F 3 "~" H 6800 2300 50  0001 C CNN
-	1    6800 2300
-	-1   0    0    -1  
+P 6700 2300
+F 0 "J1" H 6750 2850 50  0000 C CNN
+F 1 "Conn_02x08_Odd_Even" H 6750 2750 50  0000 C CNN
+F 2 "Connector_Molex:Molex_SlimStack_55560-0161_2x08_P0.50mm_Vertical" H 6700 1800 50  0000 C CNN
+F 3 "~" H 6700 2300 50  0001 C CNN
+	1    6700 2300
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7000 2100 7100 2100
@@ -212,10 +212,10 @@ Wire Wire Line
 	6400 2700 6400 2600
 Connection ~ 6400 2600
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 5FC2A8B0
 P 7100 2600
-F 0 "#PWR?" H 7100 2350 50  0001 C CNN
+F 0 "#PWR0101" H 7100 2350 50  0001 C CNN
 F 1 "GND" V 7105 2472 50  0000 R CNN
 F 2 "" H 7100 2600 50  0001 C CNN
 F 3 "" H 7100 2600 50  0001 C CNN
@@ -229,4 +229,7 @@ Wire Wire Line
 Wire Wire Line
 	7100 2700 7100 2600
 Connection ~ 7100 2600
+Connection ~ 7100 2700
+Connection ~ 7100 2000
+Connection ~ 7100 2200
 $EndSCHEMATC
