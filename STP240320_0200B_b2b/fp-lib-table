@@ -1,3 +1,3 @@
 (fp_lib_table
-  (lib (name Gigahawk)(type KiCad)(uri D:/git_WSL/STP240320_0200B_b2b/Gigahawk.pretty)(options "")(descr ""))
+  (lib (name Gigahawk)(type KiCad)(uri C:/Users/Jaschan/repos/STP240320_0200B_b2b/STP240320_0200B_b2b/../Gigahawk.pretty)(options "")(descr ""))
 )
