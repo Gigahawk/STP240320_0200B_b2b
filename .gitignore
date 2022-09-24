@@ -1,3 +1,9 @@
 **-bak
 **export
+**_autosave**
+**-bak
+**.FCStd*
+!**.FCStd
+**-backups
+**.kicad_prl
 
