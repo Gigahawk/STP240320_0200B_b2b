@@ -2,16 +2,15 @@ name: "Generate PCB production outputs"
 
 on: push
 
-
 jobs:
   fab-files:
-    name: PCB fabrication files
     strategy:
       matrix:
         project: [STP240320_0200B_b2b, STP240320_0200B_b2b_breakout]
     env:
       KIBOT_QR_CONFIG: kibot_qr.yaml
       PROJ_NAME: ${{ matrix.project }}
+    name: PCB fabrication files
     runs-on: ubuntu-latest
     container: setsoft/kicad_auto:ki6.0.7_Debian
     steps:
@@ -74,27 +73,3 @@ jobs:
         with:
           name: ${{ env.SCHEM_NAME }}
           path: Schematic
-
-  release:
-    if: startsWith(github.ref, 'refs/tags/') && ${{ !env.ACT }}
-    needs: fab-files
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download files
-        uses: actions/download-artifact@v3
-
-      - name: Zip each folder
-        run: |
-          for d in */; do
-            echo "Zipping ${d} into ${d%/}.zip"
-            zip -r "${d%/}.zip" "$d"
-            echo "Deleting ${d}"
-            rm -rf "$d"
-          done
-
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            *
-
