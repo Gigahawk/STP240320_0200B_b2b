@@ -76,7 +76,7 @@ jobs:
           path: Schematic
 
   release:
-    if: startsWith(github.ref, 'refs/tags/') && ${{ !env.ACT }}
+    if: startsWith(github.ref, 'refs/tags/')
     needs: fab-files
     runs-on: ubuntu-latest
     steps:
