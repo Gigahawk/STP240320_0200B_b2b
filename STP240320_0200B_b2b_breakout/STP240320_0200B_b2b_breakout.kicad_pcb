@@ -65,6 +65,10 @@
     )
   )
 
+  (property "DATE" "YYYY-MM-DD HH:MM:SS")
+  (property "REVISION" "REVISION")
+  (property "TAG" "TAG")
+
   (net 0 "")
   (net 1 "Net-(DISP1-Pad2)")
   (net 2 "GND")
@@ -1461,6 +1465,9 @@
   )
   (gr_text "BLK" (at 5.08 54.864 90) (layer "F.SilkS") (tstamp 52ce3514-0f8a-4dd3-bab9-00bd12525b2e)
     (effects (font (size 1 1) (thickness 0.15)) (justify left))
+  )
+  (gr_text "${TAG}\n(${REVISION})" (at 28.321 29.845) (layer "F.SilkS") (tstamp 9b8a3f3b-1d5f-41e8-8e66-8a5056a0d9ec)
+    (effects (font (size 1 1) (thickness 0.15)))
   )
 
   (segment (start 20.95 4.0844) (end 20.95 1.822) (width 0.25) (layer "F.Cu") (net 1) (tstamp 04321c94-0218-4602-9487-430e53f08710))
