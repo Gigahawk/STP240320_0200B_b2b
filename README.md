@@ -18,6 +18,22 @@ The display itself can be purchased from [Surenoo Display on AliExpress](https:/
 
 The flex ribbon connector isn't designed to go into a FFC connector, so this board is used to connectorize the display.
 
+### Update 2022-10-27
+I have recently purchased more of these displays and they are not the same as the displays I originally purchased back in 2020, nor do they match the picture in the listing.
+
+Original is on the left, the display I recently received on the right:
+![comparison_front](./images/comparison_front.jpg)
+![comparison_rear](./images/comparison_rear.jpg)
+
+While I have not tested this new display with the adapter, visually they appear to be functionally identical.
+The display housing has the exact same outer dimensions.
+The connector has the same number of pins with the same pitch and in the same order.
+The connector location relative to the display housing appears to be the same as well
+
+Since I have not tested the display yet with the breakout, I do not know whether:
+- The pinout of the connector is actually identical to the original
+- The viewing area location matches the original display
+
 ## STP240320_0200B_b2b
 
 The `STP240320_0200B_b2b` folder contains KiCad files for the board to board adapter shown above
