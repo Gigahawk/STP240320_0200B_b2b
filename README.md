@@ -63,3 +63,16 @@ There are a few vendors on AliExpress that appear to be selling this breakout:
 - https://www.aliexpress.com/i/1005004116832438.html
 - https://www.aliexpress.com/i/32705031396.html
 - https://www.aliexpress.com/i/1005004116821841.html
+
+### Update 2022-11-05
+
+I've purchased breakouts from the first link in the above list (XunMing Store), some notes about them:
+- They work identically to the STP240320_0200B
+    - Tested using Adafruit's [CircuitPython Displayio Quickstart Guide](https://learn.adafruit.com/2-0-inch-320-x-240-color-ips-tft-display/circuitpython-displayio-quickstart)
+- The breakout boards use a rather strong foam tape that makes the display hard to separate from the PCB, if possible I recommend purchasing the bare display module on its own for integration into other projects, and to use the breakout only for prototyping
+- The display module is significantly larger in all dimensions compared to the STP240320_0200B
+    - The bezels are significantly larger, and the whole module is thicker
+- The FFC connector used does not save any space compared to the SlimStack connector used.
+    - When fully assembled (i.e. B2B adapter connected to the breakout), the SlimStack connectors are about the same height as the closed FFC connector
+    - The FFC connector is significantly wider than both the SlimStack connector and the B2B adapter board (perpendicular to the direction of FFC insertion)
+    - The FFC connector is about the same length of the B2B adapter board (parallel to the direction of FFC insertion)
