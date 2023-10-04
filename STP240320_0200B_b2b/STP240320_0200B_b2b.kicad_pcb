@@ -638,7 +638,7 @@
   (gr_text "JLCJLCJLCJLC" (at 115.5 89.8 90) (layer "B.SilkS") (tstamp 592a928d-3e6e-4ee9-8303-f3592b27133f)
     (effects (font (size 0.8 0.8) (thickness 0.15)) (justify mirror))
   )
-  (gr_text "TAG (${HASH})" (at 114.3 92.5 90) (layer "F.Mask") (tstamp 6e23d37a-3804-4cb0-9f56-ede150eedda5)
+  (gr_text "${TAG} (${HASH})" (at 114.3 92.5 90) (layer "F.Mask") (tstamp 6e23d37a-3804-4cb0-9f56-ede150eedda5)
     (effects (font (size 0.5 0.5) (thickness 0.1)) (justify left))
   )
   (gr_text "STP240320_0200B\nB2B Adapter" (at 118.4 88.9 90) (layer "F.Mask") (tstamp 7a0b9ca7-f185-4d27-bdaa-f94d89478f7d)
