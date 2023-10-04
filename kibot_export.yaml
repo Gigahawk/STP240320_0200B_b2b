@@ -137,6 +137,13 @@ outputs:
     type: pdf_sch_print
     dir: Schematic
 
+  - name: boardview
+    comment: Exports the PCB in board view format.
+    type: boardview
+    dir: 'BoardView'
+    options:
+      output: '%f-%i%I%v.%x'
+
   - name: bom
     comment: Bill of materials
     type: bom
