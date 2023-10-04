@@ -136,3 +136,21 @@ outputs:
     comment: Schematic in PDF format
     type: pdf_sch_print
     dir: Schematic
+
+  - name: bom
+    comment: Bill of materials
+    type: bom
+    dir: BOM
+    options:
+      format: CSV
+      columns:
+        - field: Description
+        - field: References
+        - field: Value
+        - field: Footprint
+        - field: Quantity Per PCB
+          name: Quantity
+        - field: Digikey
+        - field: Mouser
+        - field: LCSC
+

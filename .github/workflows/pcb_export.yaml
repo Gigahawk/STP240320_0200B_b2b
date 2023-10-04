@@ -8,12 +8,14 @@ jobs:
     name: PCB fabrication files
     strategy:
       matrix:
-        project: [STP240320_0200B_b2b, STP240320_0200B_b2b_breakout]
+        project:
+          - STP240320_0200B_b2b
+          - STP240320_0200B_b2b_breakout
     env:
       KIBOT_QR_CONFIG: kibot_qr.yaml
       PROJ_NAME: ${{ matrix.project }}
     runs-on: ubuntu-latest
-    container: setsoft/kicad_auto:ki6.0.7_Debian
+    container: setsoft/kicad_auto:ki7
     steps:
       - uses: actions/checkout@v3
         with:
@@ -39,6 +41,12 @@ jobs:
 
       - name: Generate gerbers filename
         run: echo "GERBERS_NAME=${PROJ_NAME}_${BUILD_BRANCH}_${BUILD_COMMIT}_${BUILD_DATE}_gerbers" >> $GITHUB_ENV
+
+      - name: Generate boardview filename
+        run: echo "BOARDVIEW_NAME=${PROJ_NAME}_${BUILD_BRANCH}_${BUILD_COMMIT}_${BUILD_DATE}_boardview" >> $GITHUB_ENV
+
+      - name: Generate bom filename
+        run: echo "BOM_NAME=${PROJ_NAME}_${BUILD_BRANCH}_${BUILD_COMMIT}_${BUILD_DATE}_bom" >> $GITHUB_ENV
 
       - name: Generate manufacturing outputs
         run: kibot -c kibot_export.yaml -b ${{ matrix.project }}/${{ matrix.project }}.kicad_pcb
@@ -74,6 +82,20 @@ jobs:
         with:
           name: ${{ env.SCHEM_NAME }}
           path: Schematic
+
+      - name: Upload boardview
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.BOARDVIEW_NAME }}
+          path: BoardView
+
+      - name: Upload BOM
+        if: ${{ !env.ACT }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ env.BOM_NAME }}
+          path: BOM
 
   release:
     if: startsWith(github.ref, 'refs/tags/')
