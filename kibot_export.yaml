@@ -3,7 +3,7 @@ kibot:
 
 preflight:
   set_text_variables:
-    - name: 'REVISION'
+    - name: 'HASH'
       command: 'git --no-pager log -1 --format="%h"'
     - name: 'DATE'
       command: echo "$DATE"
